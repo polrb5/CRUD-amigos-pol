@@ -1,0 +1,40 @@
+:root {
+  --color-principal: #483d8b;
+}
+header {
+  margin-top: 20px;
+}
+.btn,
+.btn:hover {
+  background-color: var(--color-principal);
+  color: #fff;
+}
+.btn-crear {
+  margin-top: 15px;
+}
+.btn-form {
+  margin-bottom: 10px;
+}
+.card-amigo {
+  background-color: var(--color-principal);
+
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.cards-amigos {
+  margin-top: 30px;
+}
+.datos-amigo li {
+  margin-bottom: 10px;
+}
+.card-padre {
+  position: relative;
+  color: #fff;
+}
+.iconos {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+}
