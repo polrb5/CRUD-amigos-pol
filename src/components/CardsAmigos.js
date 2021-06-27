@@ -1,9 +1,19 @@
+import { useCallback } from "react";
 import { FaPencilAlt, FaStar, FaTimes } from "react-icons/fa";
 
 export const CardsAmigos = (props) => {
   const {
     amigo: { nombre, apellido, valoracion, id },
+    toggleForm,
+    setAccion,
+    borrarAmigo,
+    amigo,
+    setIdAmigo,
   } = props;
+
+  /*  const getId = useCallback(() => {
+    setIdAmigo(id);
+  }, [id, setIdAmigo]); */
   return (
     <div className="card-padre col-4">
       <li className="card-amigo">
@@ -18,8 +28,14 @@ export const CardsAmigos = (props) => {
           </li>
         </ul>
         <div className="iconos">
-          <FaPencilAlt />
-          <FaTimes />
+          <FaPencilAlt
+            onClick={() => {
+              toggleForm();
+              setAccion("modificar");
+              // getId();
+            }}
+          />
+          <FaTimes onClick={() => borrarAmigo(amigo)} />
         </div>
       </li>
     </div>
